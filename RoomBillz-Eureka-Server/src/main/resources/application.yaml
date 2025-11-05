@@ -1,11 +1,21 @@
 server:
   port: 8761
 
+spring:
+  application:
+    name: ROOMBILLZ-EUREKA-SERVER
+    
 eureka:
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 5000
+
   client:
     register-with-eureka: false
     fetch-registry: false
 
-spring:
-  application:
-    name: ROOMBILLZ-EUREKA-SERVER
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"    
