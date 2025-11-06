@@ -10,6 +10,7 @@ public class RoomBillzEurekaServerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RoomBillzEurekaServerApplication.class, args);
+		System.out.println("************************************************** RoomBillz Eureka Server Started Successfully ************************************************************");
 	}
 
 }
