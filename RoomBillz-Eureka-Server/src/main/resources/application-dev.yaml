@@ -4,28 +4,16 @@ server:
 spring:
   application:
     name: ROOMBILLZ-EUREKA-SERVER
-
-# ============================================================
-# EUREKA SERVER CONFIG
-# ============================================================
+    
 eureka:
   server:
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 5000
 
-  instance:
-    hostname: ${EUREKA_HOST:localhost}
-
   client:
     register-with-eureka: false
     fetch-registry: false
 
-    service-url:
-      defaultZone: http://${EUREKA_HOST:localhost}:8761/eureka/
-
-# ============================================================
-# ACTUATOR + PROMETHEUS
-# ============================================================
 management:
   endpoints:
     web:
@@ -37,3 +25,4 @@ management:
   metrics:
     tags:
       application: ${spring.application.name}
+  
