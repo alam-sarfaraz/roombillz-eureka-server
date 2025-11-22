@@ -4,6 +4,9 @@ server:
 spring:
   application:
     name: ROOMBILLZ-EUREKA-SERVER
+    
+  profiles:
+    active: local    
 
 # ============================================================
 # EUREKA SERVER CONFIG
